@@ -9,10 +9,10 @@ let sessoes = [];
 router.post('/autenticar', function(req, res, next) {
 	console.log('Recuperando usuário por login e senha');
 
-	var login = req.body.login; // depois de .body, use o nome (name) do campo em seu formulário de login
+	var login = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
 	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
 	
-	let instrucaoSql = `select * from usuario where login='${login}' and senha='${senha}'`;
+	let instrucaoSql = `select * from Cadastro where (e_mail='${login}' or nome='${login}') and senha='${senha}'`;
 	console.log(instrucaoSql);
 
 	sequelize.query(instrucaoSql, {
@@ -21,8 +21,6 @@ router.post('/autenticar', function(req, res, next) {
 		console.log(`Encontrados: ${resultado.length}`);
 
 		if (resultado.length == 1) {
-			sessoes.push(resultado[0].dataValues.login);
-			console.log('sessoes: ',sessoes);
 			res.json(resultado[0]);
 		} else if (resultado.length == 0) {
 			res.status(403).send('Login e/ou senha inválido(s)');
@@ -42,7 +40,7 @@ router.post('/', function(req, res, next) {
 	
 	Usuario.create({
 		nome : req.body.nome,
-		login : req.body.login,
+		e_mail : req.body.email,
 		senha: req.body.senha
 	}).then(resultado => {
 		console.log(`Registro criado: ${resultado}`)

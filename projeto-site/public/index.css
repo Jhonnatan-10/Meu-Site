@@ -1,0 +1,120 @@
+body{
+
+    padding:0px;
+    margin: 0px;
+}
+
+/* Cabeçalho */
+.div_cabecalho{
+    position: absolute;
+    width: 100%;
+    height: 11VH;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+/* estabelecendo o tamanho do logo */  
+.logo{
+    height: 5vw;
+    margin-left: 8vh;
+}
+
+/* Cabeçalho */
+.div_botoes{
+/* estabelecendo posição e tamanho dos potões */     
+    position: absolute;
+    width: 29VW;
+    height: 11VH;
+    margin-top: 0VW;
+    margin-left: 67VW;
+    background-color: black
+}
+
+.botao_login{
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 24VW;
+    font-size: 3vh;
+    text-decoration: none;
+}
+
+.div_do_meio{
+    position: absolute;
+    width: 100%;
+    height: 89%;
+    margin-top: 11VH;
+    margin-left: 0VW;  
+    background: url('./logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* imagem informativa de lutas */
+.luta1{
+    float: left;
+    margin-top: -54vh;
+    margin-left: 2vw;
+    width: 57%;
+}
+
+/* plano de fundo da div do meio */
+.fundo_meio{
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Aréa do cadastro parametros do tamanho*/
+.div_cadastro{
+    margin-left: 70VW;
+    width: 26%;
+    height: 68%;
+    margin-top: 47px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nome_cadastrar{
+    float: left;
+    width: 9VW;
+    height: 2VW;
+    margin-left: 36%;
+    margin-top: 4%;
+    font-size: 20px;
+    color: white;
+}
+
+.input1{
+    width: 17VW;
+    height: 3VW;
+    margin-left: 10vh;
+    margin-top: 3vw;
+    border-radius: 7px;
+    border: none;
+}
+
+.input{
+    width: 17VW;
+    height: 3VW;
+    margin-left: 10vh;
+    margin-top: 2vh;
+    border-radius: 7px;
+    border: none;
+}
+
+.botao_finalizar{
+    width:50%;
+    height:10%;
+    margin-left: 14vh;
+    margin-top: 2vh;
+    border-radius: 1111111111111111px;
+    border: none;
+    background-color: green;
+    color: black;
+}
+

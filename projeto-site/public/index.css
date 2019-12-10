@@ -37,6 +37,19 @@ body{
     margin-left: 24VW;
     font-size: 3vh;
     text-decoration: none;
+    color: white;
+}
+.botao_login:hover{
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 24VW;
+    font-size: 3vh;
+    text-decoration: none;
+    border-radius: 47px;
+    color: white;
+    background-color: blue;
+    padding-left: 11px;
+    padding-right: 11px;
 }
 
 .div_do_meio{

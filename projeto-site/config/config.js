@@ -1,3 +1,4 @@
+ 
 module.exports = {
   development: {
     dialect: "sqlite",
@@ -8,11 +9,24 @@ module.exports = {
     storage: ":memory:"
   },
   production: {
-    username: 'root',
-    password: 'bandtec',
-    database: 'Usuario',
-    host: 'localhost',
-    dialect: 'mysql'
+    username: 'usereasypark',
+    password: '#Gfgrupo4',
+    database: 'bdeasypark',
+    host: 'srveasypark.database.windows.net',
+    dialect: 'mssql',
+    xuse_env_variable: 'DATABASE_URL',
+    dialectOptions: {
+      options: {
+        encrypt: true
+      }
+    },
+    pool: { 
+      max: 5,
+      min: 1,
+      acquire: 5000,
+      idle: 30000,
+      connectTimeout: 5000
+    }
   }
 };
  
